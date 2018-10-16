@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script type="text/javascript" src="handle.min.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <script src="javascript.js"></script>
+    <script type="text/javascript" src="javascript.js" defer></script>
 </head>
 
 <body>
@@ -23,91 +24,101 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <div class="card mt-3" style="width: 18rem">
-                        <img id="image" src="https://is5-ssl.mzstatic.com/image/thumb/Video125/v4/85/b8/cf/85b8cf19-30f8-4b2d-c4e4-87eb52e2ba28/pr_source.lsr/268x0w.png"
+                    <div class="card mt-5" style="width: 18rem">
+                        <img id="image1" src="https://is5-ssl.mzstatic.com/image/thumb/Video125/v4/85/b8/cf/85b8cf19-30f8-4b2d-c4e4-87eb52e2ba28/pr_source.lsr/268x0w.png"
                             height="270">
                         <div class="card-body">
                             <h5 class="card-title">Black Panther</h5>
                             <p class="card-text">Description: After the death of his father, T'Challa returns home to
                                 the African nation of Wakanda to take his rightful place as king.</p>
+                            <p class="card-text">Genre: Action, Adventure, Science Fiction, Fantasy</p>
                             <p class="card-text">Rent: $5.99 per day</p>
-                            <p class="card-text">Stock: 2</p>
-                            <button class="btn btn-success btn-lg btn-block">Rent Item</button>
+                            <p class="card-text">Stock:<span id="stock">2</span></p>
+                            <button id="Rent" class="btn btn-success btn-lg btn-block">Rent Item</button>
                         </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card mt-3" style="width: 18rem">
-                        <img src="http://www.gstatic.com/tv/thumb/v22vodart/12863030/p12863030_v_v8_ae.jpg" height="270">
+                    <div class="card mt-5" style="width: 18rem">
+                        <img id="image2" src="http://www.gstatic.com/tv/thumb/v22vodart/12863030/p12863030_v_v8_ae.jpg"
+                            height="270">
                         <div class="card-body">
                             <h5 class="card-title">Avengers Infinity War</h5>
                             <p class="card-text">Description: The Avengers
                                 unite to battle
                                 their most powerful enemy yet Thanos. On a mission to collect all six
                                 Infinity Stones.</p>
+                            <p class="card-text">Genre: Action, Adventure, Superhero, Fantasy, Science Fiction</p>
                             <p class="card-text">Rent: $5.99 per day</p>
-                            <p class="card-text">Stock: 2</p>
-                            <button class="btn btn-success btn-lg btn-block">Rent Item</button>
+                            <p class="card-text">Stock:<span id="stock">2</span></p>
+                            <button id="Rent" class="btn btn-success btn-lg btn-block">Rent Item</button>
                         </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card mt-3" style="width: 18rem">
-                        <img src="https://media.services.cinergy.ch/media/box1600/ca93e72443de5c0a69c1c45fafabef2a56d57aca.jpg"
+                    <div class="card mt-5" style="width: 18rem">
+                        <img id="image3" src="https://media.services.cinergy.ch/media/box1600/ca93e72443de5c0a69c1c45fafabef2a56d57aca.jpg"
                             height="270">
                         <div class="card-body">
                             <h5 class="card-title">Deadpool 2</h5>
                             <p class="card-text">Description: Deadpool meets Russell, an angry teenager
-                                who lives at an orphanage.fDeadpool realizes
+                                who lives at an orphanage.Deadpool realizes
                                 that he has to save him.</p>
+                            <p class="card-text">Genre: Comedy, Action, Adventure, Fantasy, Science Fiction, Superhero</p>
                             <p class="card-text">Rent: $5.99 per day</p>
-                            <p class="card-text">Stock: 3</p>
-                            <button class="btn btn-success btn-lg btn-block">Rent Item</button>
+                            <p class="card-text">Stock:<span id="stock">3</span></p>
+                            <button id="Rent" class="btn btn-success btn-lg btn-block">Rent Item</button>
                         </div>
                     </div>
                 </div>
                 <div class="w-100"></div>
                 <div class="col">
                     <div class="card mt-5" style="width: 18rem">
-                        <img src="http://www.gstatic.com/tv/thumb/v22vodart/8884/p8884_v_v8_ag.jpg" height="270">
+                        <img id="image4" src="http://www.gstatic.com/tv/thumb/v22vodart/8884/p8884_v_v8_ag.jpg" height="270">
                         <div class="card-body">
                             <h5 class="card-title">Star Wars:The Empire strikes back</h5>
                             <p class="card-text">Description: Luke Skywalker , Han Solo, Princess Leia and Chewbacca
                                 face attack by
                                 the Imperial forces on the ice planet Hoth.</p>
+                            <p class="card-text">Genre: Action, Science Fiction, Adventure, Space Opera, Family,
+                                Fantasy</p>
                             <p class="card-text">Rent: $3.99 per day</p>
-                            <p class="card-text">Stock: 4</p>
-                            <button class="btn btn-success btn-lg btn-block">Rent Item</button>
+                            <p class="card-text">Stock:<span id="stock">4</span></p>
+                            <button id="Rent" class="btn btn-success btn-lg btn-block">Rent Item</button>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card mt-5" style="width: 18rem;">
-                        <img src="http://www.gstatic.com/tv/thumb/v22vodart/21443/p21443_v_v8_ad.jpg" height="270">
+                        <img id="image5" src="http://www.gstatic.com/tv/thumb/v22vodart/21443/p21443_v_v8_ad.jpg"
+                            height="270">
                         <div class="card-body">
-                            <h5 class="card-title">The Negotiator</h5>
+                            <h5 id="title" class="card-title">The Negotiator</h5>
                             <p class="card-text">Description: Danny Roman (Samuel L. Jackson) is considered the best
                                 police
                                 hostage negotiator in Chicago. After a friend warns him thatsomeone is embezzling from
                                 a
                                 disability fund, the person is found dead. </p>
+                            <p class="card-text">Genre: Action, Crime, Drama, Mystery</p>
                             <p class="card-text">Rent: $3.99 per day</p>
-                            <p class="card-text">Stock: 4</p>
-                            <button class="btn btn-success btn-lg btn-block">Rent Item</button>
+                            <p class="card-text">Stock:<span id="stock">4</span></p>
+                            <button id="Rent" class="btn btn-success btn-lg btn-block">Rent Item</button>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card mt-5" style="width: 18rem">
-                        <img src="http://www.gstatic.com/tv/thumb/v22vodart/12720/p12720_v_v8_an.jpg" height="270">
+                        <img id="image6" src="http://www.gstatic.com/tv/thumb/v22vodart/12720/p12720_v_v8_an.jpg"
+                            height="270">
                         <div class="card-body">
                             <h5 class="card-title">Goodfellas</h5>
                             <p class="card-text">Description: A young man grows up in the mob and works very hard to
                                 advance himself through the ranks. He enjoys his life of money and luxury, but is
                                 oblivious to the horror that he causes.</p>
+                            <p class="card-text">Genre: Thriller, Crime, Drama, Detective Fiction</p>
                             <p class="card-text">Rent: $2.99 per day</p>
-                            <p class="card-text">Stock: 5</p>
-                            <button class="btn btn-success btn-lg btn-block">Rent Item</button>
+                            <p class="card-text">Stock:<span id="stock">5</span></p>
+                            <button id="Rent" class="btn btn-success btn-lg btn-block">Rent Item</button>
                         </div>
                     </div>
                 </div>
