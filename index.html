@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script type="text/javascript" src="handle.min.js" defer></script>
+    <script type="text/javascript" src="handlebars/handlebar.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <script type="text/javascript" src="javascript.js" defer></script>
@@ -33,8 +33,8 @@
                                 the African nation of Wakanda to take his rightful place as king.</p>
                             <p class="card-text">Genre: Action, Adventure, Science Fiction, Fantasy</p>
                             <p class="card-text">Rent: $5.99 per day</p>
-                            <p class="card-text">Stock:<span id="stock">2</span></p>
-                            <button id="Rent" class="btn btn-success btn-lg btn-block">Rent Item</button>
+                            <button type="button" data-toggle="modal" data-target="#mod" id="Rent" class="btn btn-success btn-lg btn-block">Rent
+                                Item</button>
                         </div>
                     </div>
                 </div>
@@ -50,8 +50,9 @@
                                 Infinity Stones.</p>
                             <p class="card-text">Genre: Action, Adventure, Superhero, Fantasy, Science Fiction</p>
                             <p class="card-text">Rent: $5.99 per day</p>
-                            <p class="card-text">Stock:<span id="stock">2</span></p>
-                            <button id="Rent" class="btn btn-success btn-lg btn-block">Rent Item</button>
+
+                            <button id="Rent" data-toggle="modal" data-target="#mod" type="button" class="btn btn-success btn-lg btn-block">Rent
+                                Item</button>
                         </div>
                     </div>
                 </div>
@@ -66,8 +67,9 @@
                                 that he has to save him.</p>
                             <p class="card-text">Genre: Comedy, Action, Adventure, Fantasy, Science Fiction, Superhero</p>
                             <p class="card-text">Rent: $5.99 per day</p>
-                            <p class="card-text">Stock:<span id="stock">3</span></p>
-                            <button id="Rent" class="btn btn-success btn-lg btn-block">Rent Item</button>
+
+                            <button id="Rent" data-toggle="modal" data-target="#mod" type="button" class="btn btn-success btn-lg btn-block">Rent
+                                Item</button>
                         </div>
                     </div>
                 </div>
@@ -83,8 +85,9 @@
                             <p class="card-text">Genre: Action, Science Fiction, Adventure, Space Opera, Family,
                                 Fantasy</p>
                             <p class="card-text">Rent: $3.99 per day</p>
-                            <p class="card-text">Stock:<span id="stock">4</span></p>
-                            <button id="Rent" class="btn btn-success btn-lg btn-block">Rent Item</button>
+
+                            <button id="Rent" data-toggle="modal" data-target="#mod" type="button" class="btn btn-success btn-lg btn-block">Rent
+                                Item</button>
                         </div>
                     </div>
                 </div>
@@ -101,8 +104,9 @@
                                 disability fund, the person is found dead. </p>
                             <p class="card-text">Genre: Action, Crime, Drama, Mystery</p>
                             <p class="card-text">Rent: $3.99 per day</p>
-                            <p class="card-text">Stock:<span id="stock">4</span></p>
-                            <button id="Rent" class="btn btn-success btn-lg btn-block">Rent Item</button>
+
+                            <button id="Rent" data-toggle="modal" data-target="#mod" type="button" class="btn btn-success btn-lg btn-block">Rent
+                                Item</button>
                         </div>
                     </div>
                 </div>
@@ -117,14 +121,57 @@
                                 oblivious to the horror that he causes.</p>
                             <p class="card-text">Genre: Thriller, Crime, Drama, Detective Fiction</p>
                             <p class="card-text">Rent: $2.99 per day</p>
-                            <p class="card-text">Stock:<span id="stock">5</span></p>
-                            <button id="Rent" class="btn btn-success btn-lg btn-block">Rent Item</button>
+
+                            <button id="Rent" data-toggle="modal" data-target="#mod" type="button" class="btn btn-success btn-lg btn-block">Rent
+                                Item</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="modal fade" id="mod" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ModalLabel">Information</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-group" method="get">
+                            <div class="form-group">
+                                <p>
+                                    <label for="Name">Name</label>
+                                    <input type="name" class="form-control" placeholder="Enter Name">
+                                </p>
+                            </div>
+                            <div class="form-group">
+                                <p>
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" placeholder="Enter Email">
+                                </p>
+                            </div>
+                            <div class="form-group">
+                                <p>
+                                    <label for="phone">Phone Number</label>
+                                    <input type="text" class="form-control" placeholder="Enter Phone Number">
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+
 
 
 </body>
