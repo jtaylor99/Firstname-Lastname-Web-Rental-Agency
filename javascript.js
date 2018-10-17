@@ -21,27 +21,22 @@ function nameContains() {
         }
     });
 }
-function emailContains() {
+
+function phoneNumber() {
     const rentInformationForm = document.forms["rent-information-form"];
-    const emailInput = rentInformationForm.elements["email"];
-    emailInput.addEventListener("blur", function(event) {
-        const letters = /^[A-Za-z]+$/;
+    const phoneNumberInput = rentInformationForm.elements["phone"];
+    phoneNumberInput.addEventListener("blur", function(event) {
         const numbers = /^[0-9]+$/;
-        const specialCh = /^[@.]+$/;
-        const email = emailInput.value;
-        if (
-            email.match(letters) ||
-            email.match(numbers) ||
-            email.match(specialCh)
-        ) {
-            emailInput.classList.remove("bg-danger");
-            emailInput.classList.add("bg-success");
+        const number = phoneNumberInput.value;
+        if (number.match(numbers) && number.length < 12) {
+            phoneNumberInput.classList.remove("bg-danger");
+            phoneNumberInput.classList.add("bg-success");
         } else {
-            emailInput.classList.remove("bg-success");
-            emailI.classList.add("bg-danger");
+            phoneNumberInput.classList.remove("bg-success");
+            phoneNumberInput.classList.add("bg-danger");
         }
     });
 }
 thankYou();
 nameContains();
-emailContains();
+phoneNumber();
