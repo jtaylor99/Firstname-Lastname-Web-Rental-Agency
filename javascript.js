@@ -6,13 +6,28 @@ function thankYou() {
     var x = document.getElementById("save");
     x.setAttribute("onclick", "alertthankYou()");
 }
-function nameContains() {
+function firstNameContains() {
     const rentInformationForm = document.forms["rent-information-form"];
-    const nameInput = rentInformationForm.elements["name"];
+    const nameInput = rentInformationForm.elements["first-name"];
     nameInput.addEventListener("blur", function(event) {
         const letters = /^[A-Za-z]+$/;
         const name = nameInput.value;
-        if (name.match(letters) && name.length > 3 && name.length < 20) {
+        if (name.match(letters) && name.length > 1 && name.length < 20) {
+            nameInput.classList.remove("bg-danger");
+            nameInput.classList.add("bg-success");
+        } else {
+            nameInput.classList.remove("bg-success");
+            nameInput.classList.add("bg-danger");
+        }
+    });
+}
+function lastNameContains() {
+    const rentInformationForm = document.forms["rent-information-form"];
+    const nameInput = rentInformationForm.elements["last-name"];
+    nameInput.addEventListener("blur", function(event) {
+        const letters = /^[A-Za-z]+$/;
+        const name = nameInput.value;
+        if (name.match(letters) && name.length > 1 && name.length < 20) {
             nameInput.classList.remove("bg-danger");
             nameInput.classList.add("bg-success");
         } else {
@@ -37,6 +52,7 @@ function phoneNumber() {
         }
     });
 }
-thankYou();
-nameContains();
+// thankYou();
+firstNameContains();
+lastNameContains();
 phoneNumber();
