@@ -43,7 +43,7 @@ function phoneNumber() {
     phoneNumberInput.addEventListener("blur", function(event) {
         const numbers = /^[0-9]+$/;
         const number = phoneNumberInput.value;
-        if (number.match(numbers) && number.length < 12) {
+        if (number.match(numbers) && number.length < 12 && number.length > 9) {
             phoneNumberInput.classList.remove("bg-danger");
             phoneNumberInput.classList.add("bg-success");
         } else {
@@ -52,7 +52,28 @@ function phoneNumber() {
         }
     });
 }
+function zipCode() {
+    const rentInformationForm = document.forms["rent-information-form"];
+    const zipInput = rentInformationForm.elements["zip-code"];
+    zipInput.addEventListener("blur", function(event) {
+        const numbers = /^[0-9]+$/;
+        const zipCode = zipInput.value;
+        if (
+            zipCode.match(numbers) &&
+            zipCode.length > 1 &&
+            zipCode.length === 5
+        ) {
+            zipInput.classList.remove("bg-danger");
+            zipInput.classList.add("bg-success");
+        } else {
+            zipInput.classList.remove("bg-success");
+            zipInput.classList.add("bg-danger");
+        }
+    });
+}
+
 // thankYou();
 firstNameContains();
 lastNameContains();
 phoneNumber();
+zipCode();
