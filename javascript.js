@@ -1,79 +1,74 @@
-function alertthankYou() {
-    alert("Thank You!!!!!!!!!!!");
-}
+const Page_Data = {
+    movies: [
+        {
+            title: "Black Panther",
+            image: "./images/black-panther.jpg",
+            description:
+                "After the death of his father, T'Challa returns home to the African nation of Wakanda to take his rightful place as king.",
+            genre: "Genre: Action, Adventure, Science Fiction, Fantasy",
+            price: 5.99
+        },
+        {
+            title: "Avengers Infinity War",
+            image: "./images/infinity-war.jpg",
+            description:
+                "The Avengers unite to battle their most powerful enemy yet Thanos. On a mission to collect all six Infinity Stones.",
+            genre:
+                "Genre: Action, Adventure, Superhero, Fantasy, Science Fiction",
+            price: 4.99
+        },
+        {
+            title: "Deadpool 2",
+            image: "./images/deadpool2.jpg",
+            description:
+                "Deadpool meets Russell, an angry teenager who lives at an orphanage.Deadpool realizes that he has to save him.",
+            genre:
+                "Genre: Comedy, Action, Adventure, Fantasy, Science Fiction, Superhero",
+            price: 4.99
+        },
+        {
+            title: "Star Wars: The Empire strikes back",
+            image: "./images/Star Wars Episode 5.jpg",
+            description:
+                " Luke Skywalker , Han Solo, Princess Leia and Chewbacca face attack by the Imperial forces on the ice planet Hoth.",
+            genre:
+                "Genre: Action, Science Fiction, Adventure, Space Opera, Family,Fantasy",
+            price: 3.99
+        },
+        {
+            title: "The Negotiator",
+            image: "./images/The Negotiator.jpg",
+            description:
+                "Danny Roman is considered the best police hostage negotiator in Chicago. After a friend warns him thatsomeone is embezzling from a disability fund, the person is found dead.",
+            genre: "Genre: Action, Crime, Drama, Mystery",
+            price: 3.99
+        },
+        {
+            title: "Goodfellas",
+            image: "./images/goodfellas.jpg",
+            description:
+                "A young man grows up in the mob and works very hard to advance himself through the ranks. He enjoys his life of money and luxury, but is oblivious to the horror that he causes.",
+            genre: "Genre: Thriller, Crime, Drama, Detective Fiction",
+            price: 3.99
+        }
+    ]
+};
 
-function thankYou() {
-    var x = document.getElementById("save");
-    x.setAttribute("onclick", "alertthankYou()");
+function loadTemplate() {
+    var source = document.getElementById("template").innerHTML;
+    var template = Handlebars.compile(source);
+    var newInformation = "";
+    for (var i = 0; i < Page_Data.movies.length; i++) {
+        newInformation += template({
+            title: Page_Data.movies[i].title,
+            imageURL: Page_Data.movies[i].image,
+            description: Page_Data.movies[i].description,
+            price: Page_Data.movies[i].price,
+            genre: Page_Data.movies[i].genre
+        });
+    }
+    document
+        .getElementById("item")
+        .insertAdjacentHTML("beforeend", newInformation);
 }
-function firstNameContains() {
-    const rentInformationForm = document.forms["rent-information-form"];
-    const nameInput = rentInformationForm.elements["first-name"];
-    nameInput.addEventListener("blur", function(event) {
-        const letters = /^[A-Za-z]+$/;
-        const name = nameInput.value;
-        if (name.match(letters) && name.length > 1 && name.length < 20) {
-            nameInput.classList.remove("bg-danger");
-            nameInput.classList.add("bg-success");
-        } else {
-            nameInput.classList.remove("bg-success");
-            nameInput.classList.add("bg-danger");
-        }
-    });
-}
-function lastNameContains() {
-    const rentInformationForm = document.forms["rent-information-form"];
-    const nameInput = rentInformationForm.elements["last-name"];
-    nameInput.addEventListener("blur", function(event) {
-        const letters = /^[A-Za-z]+$/;
-        const name = nameInput.value;
-        if (name.match(letters) && name.length > 1 && name.length < 20) {
-            nameInput.classList.remove("bg-danger");
-            nameInput.classList.add("bg-success");
-        } else {
-            nameInput.classList.remove("bg-success");
-            nameInput.classList.add("bg-danger");
-        }
-    });
-}
-
-function phoneNumber() {
-    const rentInformationForm = document.forms["rent-information-form"];
-    const phoneNumberInput = rentInformationForm.elements["phone"];
-    phoneNumberInput.addEventListener("blur", function(event) {
-        const numbers = /^[0-9]+$/;
-        const number = phoneNumberInput.value;
-        if (number.match(numbers) && number.length < 12 && number.length > 9) {
-            phoneNumberInput.classList.remove("bg-danger");
-            phoneNumberInput.classList.add("bg-success");
-        } else {
-            phoneNumberInput.classList.remove("bg-success");
-            phoneNumberInput.classList.add("bg-danger");
-        }
-    });
-}
-function zipCode() {
-    const rentInformationForm = document.forms["rent-information-form"];
-    const zipInput = rentInformationForm.elements["zip-code"];
-    zipInput.addEventListener("blur", function(event) {
-        const numbers = /^[0-9]+$/;
-        const zipCode = zipInput.value;
-        if (
-            zipCode.match(numbers) &&
-            zipCode.length > 1 &&
-            zipCode.length === 5
-        ) {
-            zipInput.classList.remove("bg-danger");
-            zipInput.classList.add("bg-success");
-        } else {
-            zipInput.classList.remove("bg-success");
-            zipInput.classList.add("bg-danger");
-        }
-    });
-}
-
-// thankYou();
-firstNameContains();
-lastNameContains();
-phoneNumber();
-zipCode();
+loadTemplate();

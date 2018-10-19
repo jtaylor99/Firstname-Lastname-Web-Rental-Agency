@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rental Store</title>
-    <script type="text/javascript" src="handlebars/handlebar.js" defer></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"
+        defer></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <script type="text/javascript" src="javascript.js" defer></script>
 </head>
 
 <body>
@@ -23,259 +23,175 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <div class="card mt-5" style="width: 18rem">
-                        <img id="image1" src="https://is5-ssl.mzstatic.com/image/thumb/Video125/v4/85/b8/cf/85b8cf19-30f8-4b2d-c4e4-87eb52e2ba28/pr_source.lsr/268x0w.png"
-                            height="270">
-                        <div class="card-body">
-                            <h5 class="card-title">Black Panther</h5>
-                            <p class="card-text">Description: After the death of his father, T'Challa returns home to
-                                the African nation of Wakanda to take his rightful place as king.</p>
-                            <p class="card-text">Genre: Action, Adventure, Science Fiction, Fantasy</p>
-                            <p class="card-text">Rent: $5.99 per day</p>
-                            <button type="button" data-toggle="modal" data-target="#mod" id="Rent" class="btn btn-success btn-lg btn-block">Rent
-                                Item</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card mt-5" style="width: 18rem">
-                        <img id="image2" src="http://www.gstatic.com/tv/thumb/v22vodart/12863030/p12863030_v_v8_ae.jpg"
-                            height="270">
-                        <div class="card-body">
-                            <h5 class="card-title">Avengers Infinity War</h5>
-                            <p class="card-text">Description: The Avengers
-                                unite to battle
-                                their most powerful enemy yet Thanos. On a mission to collect all six
-                                Infinity Stones.</p>
-                            <p class="card-text">Genre: Action, Adventure, Superhero, Fantasy, Science Fiction</p>
-                            <p class="card-text">Rent: $5.99 per day</p>
+                <div id="item" class="col">
 
-                            <button id="Rent" data-toggle="modal" data-target="#mod" type="button" class="btn btn-success btn-lg btn-block">Rent
-                                Item</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card mt-5" style="width: 18rem">
-                        <img id="image3" src="https://images-na.ssl-images-amazon.com/images/I/91+VTNGzyVL._RI_.jpg"
-                            height="270">
-                        <div class="card-body">
-                            <h5 class="card-title">Deadpool 2</h5>
-                            <p class="card-text">Description: Deadpool meets Russell, an angry teenager
-                                who lives at an orphanage.Deadpool realizes
-                                that he has to save him.</p>
-                            <p class="card-text">Genre: Comedy, Action, Adventure, Fantasy, Science Fiction, Superhero</p>
-                            <p class="card-text">Rent: $5.99 per day</p>
-
-                            <button id="Rent" data-toggle="modal" data-target="#mod" type="button" class="btn btn-success btn-lg btn-block">Rent
-                                Item</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-100"></div>
-                <div class="col">
-                    <div class="card mt-5" style="width: 18rem">
-                        <img id="image4" src="http://www.gstatic.com/tv/thumb/v22vodart/8884/p8884_v_v8_ag.jpg" height="270">
-                        <div class="card-body">
-                            <h5 class="card-title">Star Wars:The Empire strikes back</h5>
-                            <p class="card-text">Description: Luke Skywalker , Han Solo, Princess Leia and Chewbacca
-                                face attack by
-                                the Imperial forces on the ice planet Hoth.</p>
-                            <p class="card-text">Genre: Action, Science Fiction, Adventure, Space Opera, Family,
-                                Fantasy</p>
-                            <p class="card-text">Rent: $3.99 per day</p>
-
-                            <button id="Rent" data-toggle="modal" data-target="#mod" type="button" class="btn btn-success btn-lg btn-block">Rent
-                                Item</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card mt-5" style="width: 18rem;">
-                        <img id="image5" src="http://www.gstatic.com/tv/thumb/v22vodart/21443/p21443_v_v8_ad.jpg"
-                            height="270">
-                        <div class="card-body">
-                            <h5 id="title" class="card-title">The Negotiator</h5>
-                            <p class="card-text">Description: Danny Roman is considered the best
-                                police
-                                hostage negotiator in Chicago. After a friend warns him thatsomeone is embezzling from
-                                a
-                                disability fund, the person is found dead. </p>
-                            <p class="card-text">Genre: Action, Crime, Drama, Mystery</p>
-                            <p class="card-text">Rent: $3.99 per day</p>
-
-                            <button id="Rent" data-toggle="modal" data-target="#mod" type="button" class="btn btn-success btn-lg btn-block">Rent
-                                Item</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card mt-5" style="width: 18rem">
-                        <img id="image6" src="http://www.gstatic.com/tv/thumb/v22vodart/12720/p12720_v_v8_an.jpg"
-                            height="270">
-                        <div class="card-body">
-                            <h5 class="card-title">Goodfellas</h5>
-                            <p class="card-text">Description: A young man grows up in the mob and works very hard to
-                                advance himself through the ranks. He enjoys his life of money and luxury, but is
-                                oblivious to the horror that he causes.</p>
-                            <p class="card-text">Genre: Thriller, Crime, Drama, Detective Fiction</p>
-                            <p class="card-text">Rent: $2.99 per day</p>
-
-                            <button id="Rent" data-toggle="modal" data-target="#mod" type="button" class="btn btn-success btn-lg btn-block">Rent
-                                Item</button>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </div>
-        <div class="modal fade" id="mod" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="ModalLabel">Wait! We need some information</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form class="form-body">
-                            <div class="form-row">
-                                <div class="col-md-4 mb-3">
-                                    <label for="validationServer01">First name</label>
-                                    <input type="text" class="form-control" placeholder="First Name" pattern="[A-Za-z\s]+"
-                                        required>
-                                    <div class="valid-feedback">
-                                        Looks good!
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <label for="validationServer02">Last name</label>
-                                    <input type="text" class="form-control" pattern="[A-Za-z\s]+" placeholder="Last Name"
-                                        required>
-                                    <div class="valid-feedback">
-                                        Looks good!
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <label for="validationServerUsername">Email</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="inputGroupPrepend3">@</span>
+            <div class="modal fade" id="mod" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="ModalLabel">Wait! We need some information</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-body">
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationServer01">First name</label>
+                                        <input type="text" class="form-control" placeholder="First Name" pattern="[A-Za-z\s]+"
+                                            required>
+                                        <div class="valid-feedback">
+                                            Looks good!
                                         </div>
-                                        <input type="email" class="form-control" id="validationServerUsername"
-                                            placeholder="Email" aria-describedby="inputGroupPrepend3" required>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationServer02">Last name</label>
+                                        <input type="text" class="form-control" pattern="[A-Za-z\s]+" placeholder="Last Name"
+                                            required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationServerUsername">Email</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                                            </div>
+                                            <input type="email" class="form-control" id="validationServerUsername"
+                                                placeholder="Email" aria-describedby="inputGroupPrepend3" required>
+                                            <div class="invalid-feedback">
+                                                Please choose a Email.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="validationServer03">City</label>
+                                        <input type="text" class="form-control" id="validationServer03" placeholder="City"
+                                            required>
                                         <div class="invalid-feedback">
-                                            Please choose a Email.
+                                            Please provide a valid city.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label for="validationServer04">State</label>
+                                        <select class="text-muted form-control" required>
+                                            <option disabled selected>Pick your state</option>
+                                            <option>AL</option>
+                                            <option>AK</option>
+                                            <option>AZ</option>
+                                            <option>AR</option>
+                                            <option>CA</option>
+                                            <option>CO</option>
+                                            <option>CT</option>
+                                            <option>DE</option>
+                                            <option>FL</option>
+                                            <option>GA</option>
+                                            <option>HI</option>
+                                            <option>ID</option>
+                                            <option>IL</option>
+                                            <option>IN</option>
+                                            <option>IA</option>
+                                            <option>KS</option>
+                                            <option>KY</option>
+                                            <option>LA</option>
+                                            <option>ME</option>
+                                            <option>MD</option>
+                                            <option>MA</option>
+                                            <option>MI</option>
+                                            <option>MN</option>
+                                            <option>MS</option>
+                                            <option>MO</option>
+                                            <option>MT</option>
+                                            <option>NE</option>
+                                            <option>NE</option>
+                                            <option>NV</option>
+                                            <option>NH</option>
+                                            <option>NJ</option>
+                                            <option>NM</option>
+                                            <option>NY</option>
+                                            <option>NC</option>
+                                            <option>ND</option>
+                                            <option>OH</option>
+                                            <option>OK</option>
+                                            <option>OR</option>
+                                            <option>PA</option>
+                                            <option>RI</option>
+                                            <option>SC</option>
+                                            <option>SD</option>
+                                            <option>TN</option>
+                                            <option>TX</option>
+                                            <option>UT</option>
+                                            <option>VT</option>
+                                            <option>VA</option>
+                                            <option>WA</option>
+                                            <option>WV</option>
+                                            <option>WI</option>
+                                            <option>WY</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-3 mb-3">
+                                        <label for="validationServer05">Zip</label>
+                                        <input type="text" class="form-control" maxlength="5" pattern="[0-9]{5}" id="validationServer05"
+                                            placeholder="12345" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid zip.
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="validationServer03">City</label>
-                                    <input type="text" class="form-control" id="validationServer03" placeholder="City"
-                                        required>
+                                <div class="form-group">
+                                    <label for="validationServer06">Phone number</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="1234567890"
+                                        maxlength="10" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
                                     <div class="invalid-feedback">
-                                        Please provide a valid city.
+                                        Please provide a valid phone number
                                     </div>
                                 </div>
-                                <div class="col-md-3 mb-3">
-                                    <label for="validationServer04">State</label>
-                                    <select class="text-muted form-control" required>
-                                        <option disabled selected>Pick your state</option>
-                                        <option>AL</option>
-                                        <option>AK</option>
-                                        <option>AZ</option>
-                                        <option>AR</option>
-                                        <option>CA</option>
-                                        <option>CO</option>
-                                        <option>CT</option>
-                                        <option>DE</option>
-                                        <option>FL</option>
-                                        <option>GA</option>
-                                        <option>HI</option>
-                                        <option>ID</option>
-                                        <option>IL</option>
-                                        <option>IN</option>
-                                        <option>IA</option>
-                                        <option>KS</option>
-                                        <option>KY</option>
-                                        <option>LA</option>
-                                        <option>ME</option>
-                                        <option>MD</option>
-                                        <option>MA</option>
-                                        <option>MI</option>
-                                        <option>MN</option>
-                                        <option>MS</option>
-                                        <option>MO</option>
-                                        <option>MT</option>
-                                        <option>NE</option>
-                                        <option>NE</option>
-                                        <option>NV</option>
-                                        <option>NH</option>
-                                        <option>NJ</option>
-                                        <option>NM</option>
-                                        <option>NY</option>
-                                        <option>NC</option>
-                                        <option>ND</option>
-                                        <option>OH</option>
-                                        <option>OK</option>
-                                        <option>OR</option>
-                                        <option>PA</option>
-                                        <option>RI</option>
-                                        <option>SC</option>
-                                        <option>SD</option>
-                                        <option>TN</option>
-                                        <option>TX</option>
-                                        <option>UT</option>
-                                        <option>VT</option>
-                                        <option>VA</option>
-                                        <option>WA</option>
-                                        <option>WV</option>
-                                        <option>WI</option>
-                                        <option>WY</option>
-                                    </select>
+                                <div class="click-buttons">
+                                    <input type="radio" id="cash" class="user" name="payment" value="Cash" checked>
+                                    <label for="cash">Cash</label>
+                                    <input type="radio" id="debit" class="user" name="payment" value="Check">
+                                    <label for="debit">Debit</label>
+                                    <input type="radio" id="credit" class="user" name="payment" value="Card">
+                                    <label for="credit">Credit</label>
                                 </div>
-                                <div class="col-sm-3 mb-3">
-                                    <label for="validationServer05">Zip</label>
-                                    <input type="text" class="form-control" maxlength="5" pattern="[0-9]{5}" id="validationServer05"
-                                        placeholder="12345" required>
-                                    <div class="invalid-feedback">
-                                        Please provide a valid zip.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="validationServer06">Phone number</label>
-                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="1234567890"
-                                    maxlength="10" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid phone number
-                                </div>
-                            </div>
-                            <div class="click-buttons">
-                                <input type="radio" id="cash" class="user" name="payment" value="Cash" checked>
-                                <label for="cash">Cash</label>
-                                <input type="radio" id="debit" class="user" name="payment" value="Check">
-                                <label for="debit">Debit</label>
-                                <input type="radio" id="credit" class="user" name="payment" value="Card">
-                                <label for="credit">Credit</label>
-                            </div>
-                            <button id="orderButton" class="btn btn-primary" type="submit">Confirm</button>
-                        </form>
+                                <button id="orderButton" class="btn btn-primary" type="submit">Confirm</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+    <script id="template" type="text/x-handlebars-template">
+        <div class="col">
+                <div class="card mt-5" style="width: 18rem">
+                    <img id="image6" src="{{ imageURL }}"
+                        height="270">
+                    <div class="card-body">
+                        <h5 class="card-title">{{title}}</h5>
+                        <p class="card-text">Description: {{description}}</p>
+                        <p class="card-text">{{genre}}</p>
+                        <p class="card-text">${{price}}</p>
+                        <button id="Rent" data-toggle="modal" data-target="#mod" type="button" class="btn btn-success btn-lg btn-block">Rent
+                                Item</button>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+    </script>
+    <script src="javascript.js" defer></script>
+    <script src="data.js" defer></script>
     <script src="js/jquery.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.js"></script>
