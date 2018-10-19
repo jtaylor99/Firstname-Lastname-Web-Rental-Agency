@@ -1,14 +1,13 @@
 body {
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d1/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg);
 }
-a {
-    text-decoration: none;
+.col {
+    display: grid;
 }
 
-.invalid {
-    background-color: red;
-}
-
-.valid {
-    background-color: green;
+@media screen and (min-width: 1000px) {
+    .col {
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+    }
 }
