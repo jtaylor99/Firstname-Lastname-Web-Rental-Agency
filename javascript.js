@@ -92,3 +92,12 @@ function price(index) {
     y.innerHTML = price;
 }
 price(index);
+function goodBye() {
+    var x = document.getElementById("mod2");
+    var y = document.getElementById("mod3");
+    x.addEventListener("click", function(event) {
+        x.style.display = "none";
+        y.style.display = "display";
+    });
+}
+goodBye();
