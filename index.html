@@ -38,6 +38,7 @@
                         </div>
                         <div class="modal-body">
                             <form class="form-body">
+                                <input type="text" name="index" id="index">
                                 <div class="form-row">
                                     <div class="col-md-4 mb-3">
                                         <label for="validationServer01">First name</label>
@@ -81,7 +82,7 @@
                                     <div class="col-md-3 mb-3">
                                         <label for="validationServer04">State</label>
                                         <select class="text-muted form-control" required>
-                                            <option disabled selected>Pick your state</option>
+                                            <option disabled selected required>Pick your state</option>
                                             <option>AL</option>
                                             <option>AK</option>
                                             <option>AZ</option>
@@ -155,21 +156,40 @@
                                 <div class="click-buttons">
                                     <input type="radio" id="cash" class="user" name="payment" value="Cash" checked>
                                     <label for="cash">Cash</label>
-                                    <input type="radio" id="debit" class="user" name="payment" value="Check">
+                                    <input type="radio" id="debit" class="user" name="payment" value="Debit">
                                     <label for="debit">Debit</label>
-                                    <input type="radio" id="credit" class="user" name="payment" value="Card">
+                                    <input type="radio" id="credit" class="user" name="payment" value="Credit">
                                     <label for="credit">Credit</label>
                                 </div>
-                                <button id="orderButton" class="btn btn-primary" type="submit">Confirm</button>
                             </form>
+                            <div class="modal-footer">
+                                <button id="orderButton" data-target="#mod2" data-toggle="modal" class="btn btn-primary"
+                                    type="submit">Confirm</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <script id="template" type="text/x-handlebars-template">
-        <div class="col">
+            <div id="mod2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="ModalLabel">Your Total is:</h5>
+                            <div class="modal-body">
+                                <p id="info-goes-here">
+
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button id="payButton" type="submit" data-toggle="modal" data-target="#mod3" class="btn btn-primary">
+                                    Pay</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script id="template" type="text/x-handlebars-template">
+            <div class="col">
                 <div class="card mt-5" style="width: 18rem">
                     <img id="image6" src="{{ imageURL }}"
                         height="270">
@@ -190,11 +210,11 @@
 
 
     </script>
-    <script src="javascript.js" defer></script>
-    <script src="data.js" defer></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.js"></script>
+            <script src="javascript.js" defer></script>
+            <script src="data.js" defer></script>
+            <script src="js/jquery.js"></script>
+            <script src="js/popper.js"></script>
+            <script src="js/bootstrap.js"></script>
 
 
 

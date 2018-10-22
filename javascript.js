@@ -58,13 +58,14 @@ function loadTemplate() {
     var source = document.getElementById("template").innerHTML;
     var template = Handlebars.compile(source);
     var newInformation = "";
-    for (var i = 0; i < Page_Data.movies.length; i++) {
+    for (index in Page_Data.movies) {
         newInformation += template({
-            title: Page_Data.movies[i].title,
-            imageURL: Page_Data.movies[i].image,
-            description: Page_Data.movies[i].description,
-            price: Page_Data.movies[i].price,
-            genre: Page_Data.movies[i].genre
+            index: index,
+            title: Page_Data.movies[index].title,
+            imageURL: Page_Data.movies[index].image,
+            description: Page_Data.movies[index].description,
+            price: Page_Data.movies[index].price,
+            genre: Page_Data.movies[index].genre
         });
     }
     document
@@ -72,3 +73,22 @@ function loadTemplate() {
         .insertAdjacentHTML("beforeend", newInformation);
 }
 loadTemplate();
+function showingThePrice() {
+    var x = document.getElementById("orderButton");
+    var z = document.getElementById("mod");
+    var y = document.getElementById("mod2");
+
+    x.addEventListener("click", function(event) {
+        z.style.display = "none";
+        y.style.display = "display";
+    });
+}
+
+showingThePrice();
+function price(index) {
+    var x = Page_Data.movies[index];
+    var price = x.price;
+    var y = document.getElementById("info-goes-here");
+    y.innerHTML = price;
+}
+price(index);
